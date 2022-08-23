@@ -1,0 +1,228 @@
+<html>
+    <head>
+        <title>Kaskazini Crew</title>
+
+        <style type="text/css">
+
+            .connIndGreen{
+                background-color:green
+            }
+
+            .connIndGrey{
+                 background-color: grey
+            }
+
+            .connIndOrange{
+                background-color:orange
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div id="connIndicator" height="3" width="3" class="">
+            <br/>
+            <br/>
+        </div>
+
+        <br/>
+
+        <button onclick="publishMessage()" label="Publish Message" text="Publish a message" type="button">
+            Publish an Event to Kaskazini Channel
+        </button>
+
+        <br/>
+        <br/>
+
+        <button onclick="sendMessage()" label="Send Message" text="Send a message" type="button">
+            Send a message to the  Kaskazini Channel
+        </button>
+        <br/>
+
+        <hr/>
+            <ul id="messages">
+                
+            </ul>
+        <hr/>
+
+        <button onclick="disconnect()" label="Disconnect" text="Manually Disconnect" type="button">
+            Manually Disconnect
+        </button>
+        <br/>
+        <br/>
+        <button onclick="connect()" label="Connect" text="Manually Connect" type="button">
+            Manually Connect
+        </button>
+        <br/>
+        <br/>
+        <button onclick="subscribe()" label="Subscribe" text="Subscribe" type="button">
+            Subscribe
+        </button>
+        <br/>
+        <br/>
+        <button onclick="unsubscribe()" label="unSubscribe" text="unSubscribe" type="button">
+            UnSubscribe
+        </button>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/centrifuge/3.0.1/centrifuge.min.js" integrity="sha512-yvtqMi5x9BxaznUzRcjRqTeT+PaZzW5LZ8e1sFZ/qPfCGfics/IiA/NimVeyU6WViM+unO/b8lVZUQKCdeDI8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+        <script type="text/javascript">
+
+            //UI DOM Stuff
+            const containerconnIndicator = document.getElementById('connIndicator');
+            const container = document.getElementById('messages')
+
+        //Obtain api from backend server, Not a secret
+        client_api_key = "4a554a556d616ecf6fb2c56586e27e690260f79d5da7bf9413d7c6aeacb6755e5d0fe05661d9531e6dcf1787738691b5014e5dfe0f8ea7f095f447251631d7068f8419484141ac"
+        
+        //##################
+        //Bundled in Signed JWT token
+        userToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoZXphY2siLCJlbWFpbCI6InphY2tAZm9yYml6Lm9yZyIsInVzZXJfaWQiOiJiNTczYWNiMy1jZDI1LTQyNDQtYTg5Mi1mZjBmZmM0YjMwNTciLCJleHAiOjE2NTk3OTk2MDN9.YmPxGfAsbEG5ZX4oNM4ffH8L80r_VD4B7U7hBvYPO2Q"
+        //clientId = "72303f7f-bcbb-428f-9314-21a6e2d7061c"
+        var presenceChannel = "KaskaziniChannel"
+        var presenceChannel2 = "MasharikiChannel"
+        //##################
+
+        serverURL = "ws://127.0.0.1:8081/v1/ws/connect"
+        //serverURL = "wss://chat-api.mfereji.io:8081/v1/ws/connect"
+
+        serverURL = serverURL+"?api_key="+client_api_key 
+
+        const MferejiClient = new Centrifuge(serverURL,{
+            token: userToken,
+            debug: true,
+            //timeout: 4000,
+            //maxReconnectDelay: 3000,
+            //maxServerPingDelay: 5000
+        })
+
+        
+        //PUB/SUB stuff, channel/group level
+        const sub = MferejiClient.newSubscription(presenceChannel);
+
+        sub.on('join', function(message) {
+            console.log(JSON.stringify(message));
+            drawText("User "+message.info.user+" has joined "+presenceChannel)
+        });
+
+        sub.on('leave', function(message) {
+            console.log(JSON.stringify(message));
+            drawText("User "+message.info.user+" has left "+presenceChannel)
+        });
+
+        sub.on('subscribed', function(message) {
+            console.log(JSON.stringify(message));
+            drawText("You have subscribed to "+presenceChannel)
+        });
+
+        sub.on('unsubscribed', function(message) {
+            console.log(JSON.stringify(message));
+            drawText("You have Unsubscribed from "+presenceChannel)
+        });
+
+        sub.on('publication', function(message) {
+            rawText = message.data.input
+            rawTextJ = JSON.stringify(message.data.input)
+            
+            //drawText(rawText)
+            console.log("Message Published to channel: "+rawText);
+            drawText(rawText )
+        });
+
+        sub.presence().then(function(message) {
+            console.log(message.clients);
+            rawText = "There are now "+message.clients+" members in "+presenceChannel
+            drawText(rawText )
+
+
+        }, function(err) {
+            // presence call failed with error
+        });
+
+        sub.presenceStats().then(function(message) {
+            console.log(message.clients);
+            rawText = "There are now "+message.numClients+" members in "+presenceChannel
+            drawText(rawText )
+
+
+        }, function(err) {
+            // presence call failed with error
+        });
+
+        //###################################
+        //Connection control stuff/client and transport level
+        MferejiClient.on('connected', function(ctx) {
+            console.log("connected to "+serverURL, ctx);
+            containerconnIndicator.className = "connIndGreen";
+        });
+
+        MferejiClient.on('connecting', function(ctx) {
+            console.log("connecting to "+serverURL, ctx);
+            containerconnIndicator.className = "connIndOrange";
+        });
+
+        MferejiClient.on('disconnected', function(ctx) {
+            console.log("connected to "+serverURL, ctx);
+            containerconnIndicator.className = "connIndGrey";
+        });
+
+        sub.subscribe();
+        MferejiClient.connect();
+
+            function sendMessage(){
+
+                str1 = "Send-Hi-1 from index1 to "+presenceChannel
+                err1 = "Error in Send-Hi-1 from index1 to "+presenceChannel
+
+                MferejiClient.send({ "channel":presenceChannel,"input":str1, }).then(function(res){
+                    console.log('successfully sent '+str1+" into "+presenceChannel);
+                },function(err1) {
+                    console.log('send error1', err1);
+                })
+
+            }
+
+            function publishMessage(){
+
+                str1 = "Pub-Hi-1 from index1 to "+presenceChannel
+                err1 = "Error in Pub-Hi-1 from index1 to "+presenceChannel
+                
+                MferejiClient.publish(presenceChannel,{ "input":str1 }).then(function(res){
+                    console.log('successfully published '+str1+" into "+presenceChannel);
+                },function(err1) {
+                    console.log('publish error1', err1);
+                })
+
+            }
+
+            function drawText(text) {
+                //alert("Alaaa!")
+                let e = document.createElement('li');
+                e.innerHTML = [(new Date()).toString(), ' ' + text].join(':');
+                container.insertBefore(e, container.firstChild);
+                
+            }
+
+            function connect(){
+                MferejiClient.connect();
+            }
+
+            function disconnect(){
+                MferejiClient.disconnect();
+            }
+
+            function subscribe(){
+                sub.subscribe();
+            }
+
+            function unsubscribe(){
+                sub.unsubscribe();
+            }   
+
+        </script>
+
+        <script src="https://unpkg.com/text-encoding@0.6.4/lib/encoding-indexes.js"></script>
+        <script src="https://unpkg.com/text-encoding@0.6.4/lib/encoding.js"></script>
+    </body>
+</html>
