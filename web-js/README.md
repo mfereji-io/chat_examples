@@ -85,11 +85,11 @@ It is important to note that the frontend client will need to obtain these crede
 
 The following pictogram shows the developer workflow.
 
-- #Before [https://github.com/mfereji-io/chat_examples/blob/main/web-js/mfereji-workflow-Start.drawio.png]
+- [Before] (https://github.com/mfereji-io/chat_examples/blob/main/web-js/mfereji-workflow-Start.drawio.png)
 
-- #Configure account [https://github.com/mfereji-io/chat_examples/blob/main/web-js/mfereji-workflow-Create%20account%20and%20integrate.drawio.png]
+- [Configure account](https://github.com/mfereji-io/chat_examples/blob/main/web-js/mfereji-workflow-Create%20account%20and%20integrate.drawio.png)
 
-- #Chat [https://github.com/mfereji-io/chat_examples/blob/main/web-js/mfereji-workflow-set%20up%20chat.drawio.png]
+- [Chat] (https://github.com/mfereji-io/chat_examples/blob/main/web-js/mfereji-workflow-set%20up%20chat.drawio.png)
 
 
 ## Further Documentation
