@@ -1,0 +1,123 @@
+<mxfile host="app.diagrams.net" modified="2022-08-23T09:29:39.113Z" agent="5.0 (Macintosh)" etag="hZSxF9oah-H_25qNpE14" version="20.2.6" type="github" pages="3">
+  <diagram id="xGsmjWUwdSs3WfRvNGsz" name="Start">
+    <mxGraphModel dx="946" dy="512" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mF20tj5GkucY1kL0fypX-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Kaskazini Crew has an in-house app + website &lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mF20tj5GkucY1kL0fypX-2" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;1: In the beginning&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mF20tj5GkucY1kL0fypX-3" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;2: User using kaskazini web app&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="340" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mF20tj5GkucY1kL0fypX-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="400" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="mF20tj5GkucY1kL0fypX-5" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;3: Kaskazini devs want mfereji chat integration &lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="960" width="510" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mF20tj5GkucY1kL0fypX-6" value="&lt;div&gt;kaskazini app &lt;br&gt;&lt;/div&gt;&lt;div&gt;user: Ali&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="80" y="770" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mF20tj5GkucY1kL0fypX-7" value="user: ali" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="50" y="410" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mF20tj5GkucY1kL0fypX-8" value="id: UUX-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=16;" vertex="1" parent="mF20tj5GkucY1kL0fypX-7">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mF20tj5GkucY1kL0fypX-9" value="name: Ali" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=16;" vertex="1" parent="mF20tj5GkucY1kL0fypX-7">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mF20tj5GkucY1kL0fypX-10" value="group: kgroup1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=16;" vertex="1" parent="mF20tj5GkucY1kL0fypX-7">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mF20tj5GkucY1kL0fypX-11" value="web app" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="130" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mF20tj5GkucY1kL0fypX-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" edge="1" parent="1" source="mF20tj5GkucY1kL0fypX-13" target="mF20tj5GkucY1kL0fypX-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mF20tj5GkucY1kL0fypX-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" edge="1" parent="1" source="mF20tj5GkucY1kL0fypX-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mF20tj5GkucY1kL0fypX-13" value="Login" style="rhombus;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="140" y="630" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="x-Hn_TvCgX8z5pdivH9l" name="Create account and integrate">
+    <mxGraphModel dx="946" dy="512" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Kaskazini Crew has an in-house app + website &lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-2" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;1: Set up Mfereji account&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-3" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;2: User using kaskazini web app&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="340" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="400" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-6" value="&lt;div&gt;kaskazini app &lt;br&gt;&lt;/div&gt;&lt;div&gt;user: Ali&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="50" y="980" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-7" value="user: ali" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="50" y="410" width="140" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-8" value="id: UUX-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=16;" vertex="1" parent="i7RJ7Id5I7k-WVDeY8VR-7">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-9" value="name: Ali" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=16;" vertex="1" parent="i7RJ7Id5I7k-WVDeY8VR-7">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-10" value="group: kchannel1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=16;" vertex="1" parent="i7RJ7Id5I7k-WVDeY8VR-7">
+          <mxGeometry y="90" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-11" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="130" y="760" width="330" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" edge="1" parent="1" source="i7RJ7Id5I7k-WVDeY8VR-14" target="i7RJ7Id5I7k-WVDeY8VR-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" edge="1" parent="1" source="i7RJ7Id5I7k-WVDeY8VR-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-14" value="Login" style="rhombus;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="140" y="630" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-15" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Kaskazini Crew has a mfereji account &lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="140" width="400" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-16" value="mfereji client as backend user" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="230" y="410" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-17" value="mfereji js client on frontend" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="140" y="770" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="i7RJ7Id5I7k-WVDeY8VR-18" value="&lt;ol&gt;&lt;li&gt;organization: Kaskazini.org&lt;/li&gt;&lt;li&gt;app: kaskazini_app&lt;/li&gt;&lt;li&gt;app_id: KZXXXX&lt;/li&gt;&lt;li&gt;app_signing_key: KZSYYY&lt;br&gt;&lt;/li&gt;&lt;li&gt;app_api: KZAZZZZ&lt;br&gt;&lt;/li&gt;&lt;/ol&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="580" y="250" width="260" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Sm22COh4ewn8LO4fd738" name="chat">
+    <mxGraphModel dx="946" dy="512" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
