@@ -93,6 +93,6 @@ The following pictogram shows the developer workflow.
 
 ## Further Documentation
 For more documentation, please see https://docs.mfereji.io/chat
-
+`
 ## Contact us
 Use the real-time chat feature here for a quick one. We will follow up on email in case we are not online.
