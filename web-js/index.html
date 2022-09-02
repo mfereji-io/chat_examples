@@ -85,7 +85,8 @@
         //##################
 
         //serverURL = "ws://127.0.0.1:8081/v1/ws/connect"
-        serverURL = "wss://lab.chat-api.mfereji.io/v1/ws/connect"
+        serverURL = "ws://192.168.0.19:8081/v1/ws/connect"
+        //serverURL = "wss://lab.chat-api.mfereji.io/v1/ws/connect"
 
         serverURL = serverURL+"?api_key="+client_api_key 
 
@@ -185,8 +186,8 @@
 
             function publishMessage(){
 
-                str1 = "Pub-Hi-1 from index1 to "+presenceChannel
-                err1 = "Error in Pub-Hi-1 from index1 to "+presenceChannel
+                str1 = "Pub-Hi-1 from Web-1 to "+presenceChannel
+                err1 = "Error in Pub-Hi-1 from Web-1 to "+presenceChannel
                 
                 MferejiClient.publish(presenceChannel,{ "input":str1 }).then(function(res){
                     console.log('successfully published '+str1+" into "+presenceChannel);
